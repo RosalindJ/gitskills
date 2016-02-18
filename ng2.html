@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+        <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+    </head>
+    <body>
+        <p>尝试修改以下表单。</p>
+		<span></span>
+		<div ng-app="myApp" ng-controller="myCtrl">
+
+			名: <input type="text" ng-model="firstName"><br>
+			姓: <input type="text" ng-model="lastName"><br>
+			<br>
+
+			姓名: <span>{{firstName + ' ' + lastName}}</span>
+
+		</div>
+		<script>
+		var app1 = angular.module('myApp', {});
+		app1.controller("myCtrl",function($scope){
+			$scope.firstName = "娟";
+			$scope.lastName = "张";
+			console.log($scope)
+		})
+		
+		</script>
+    </body>
+</html>
