@@ -1,23 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-        <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
-    </head>
-    <body>  
-    <h2>hotfix</h2>     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, voluptatum, possimus, aliquid, commodi cumque magnam delectus blanditiis excepturi veniam optio minus enim harum provident vitae laborum nobis distinctio non rerum.</p>
-     <h2>dfakjdhfad</h2>     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, voluptatum, possimus, aliquid, commodi cumque magnam delectus blanditiis excepturi veniam optio minus enim harum provident vitae laborum nobis distinctio non rerum.</p>
+<head>
+<meta charset="utf-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
 
-     <h2>dfakjdhfad</h2>     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, voluptatum, possimus, aliquid, commodi cumque magnam delectus blanditiis excepturi veniam optio minus enim harum provident vitae laborum nobis distinctio non rerum.</p>
-     <h2>dfakjdhfad</h2>     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, voluptatum, possimus, aliquid, commodi cumque magnam delectus blanditiis excepturi veniam optio minus enim harum provident vitae laborum nobis distinctio non rerum.</p>
-     <h2>dfakjdhfad</h2>     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, voluptatum, possimus, aliquid, commodi cumque magnam delectus blanditiis excepturi veniam optio minus enim harum provident vitae laborum nobis distinctio non rerum.</p>
-    </body>
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.Name +'---城市'+x.City + '--- 国家 ' + x.Country }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+  $http.get("Customers_JSON.php")
+  .success(function (response) { alert(response.records);$scope.names = response.records;});
+});
+</script>
+
+</body>
 </html>
-
-
