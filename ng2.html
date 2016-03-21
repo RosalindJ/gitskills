@@ -2,8 +2,15 @@
 <html>
     <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Document</title>
         <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+        <link rel="stylesheet" href="">
+        <style>
+			div{
+				border:2px solid red;
+			}
+        </style>
     </head>
     <body>
         <p>尝试修改以下表单。</p>
@@ -16,9 +23,13 @@
 			nihao	
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores voluptate in ipsum corporis, qui sunt officia reiciendis, nesciunt deleniti fugiat sint nisi eligendi doloremque commodi! Repellat vel veniam ipsa voluptates.
 			<br>
+			<h2>hahhhhh</h2>
+			<p>这是我的世界！hello world</p>
 
 			姓名: <span>{{firstName + ' ' + lastName}}</span>
-
+			name: <p>{{firstName + ' ' + lastName}}</p>
+			
+			<span>this</span>
 		</div>
 		<script>
 		var flag = true;
@@ -28,6 +39,8 @@
 			$scope.lastName = "张";
 			console.log($scope)
 		})
+		var ss = 0;
+		var str= "fgdfgsdfhgsfgh"
 		
 		</script>
     </body>
