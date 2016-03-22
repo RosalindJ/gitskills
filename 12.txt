@@ -1,3 +1,0 @@
-this is a txt
-learngit 12.txt
-stupid
